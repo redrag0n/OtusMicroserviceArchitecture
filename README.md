@@ -1,7 +1,12 @@
-# ДЗ 1
+# ДЗ номер 3
 
-cd app
+## Докер-образ
+docker build . --tag joinmek/healthcheck-service
 
-docker build . --tag otus_l1
+docker run -p 8000:8000 healthcheck-service
 
-docker run -p 8000:8000 otus_l1
+## Docker hub
+https://hub.docker.com/r/joinmek/healthcheck-service
+
+## Запуск
+kubectl apply -f k8s/
